@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<head>
+  <title>Lab 6 Javascript</title>
+  <link rel="stylesheet" type="text/css" href="css/lab6.css">
+</head>
+<body>
+  <h3>Farhenheit to Celsius</h3>
+      <h5>Insert Degrees in Either Box to Convert!<h5>
+        <div>
+          <p><input id="f" onkeyup="convert('F')"> Degrees in Farhenheit</p>
+        </div>
+        <div>
+          <p><input id="c" onkeyup="convert('C')"> Degrees in Celsius</p>
+        </div>
+        <script>
+function convert(degree) {
+  var x;
+  if (degree == "C") {
+      x = document.getElementById("c").value * 9 / 5 + 32;
+      document.getElementById("f").value = Math.round(x);
+  } else {
+      x = (document.getElementById("f").value -32) * 5 / 9;
+      document.getElementById("c").value = Math.round(x);
+  }
+}
+</script>
+</body>
